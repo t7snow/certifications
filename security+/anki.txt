@@ -1,0 +1,152 @@
+Explain the purpose of **Technical Controls**.|Uses technology to reduce vulnerabilities (e.g., Antivirus, Firewalls).
+Explain the purpose of **Managerial Controls**.|Administrative rules and planning (e.g., Standard Operating Procedures, Policies).
+Explain the purpose of **Operational Controls**.|Day-to-day actions and people (e.g., Security Guards, Training).
+Explain the purpose of **Physical Controls**.|Real-world restrictions on access (e.g., Fences, Locks).
+Explain a **Deterrent Control** and give the example from your notes.|Designed to discourage intrusion. Example: Warning signs, splash screens.
+Explain a **Detective Control** and give the example from your notes.|Designed to identify an intrusion. Example: Alarms, motion detectors, CCTV.
+Explain a **Corrective Control** and give the example from your notes.|Designed to mitigate damage *after* an event. Example: Fire extinguisher, restoring backups.
+Explain a **Directive Control** and give the example from your notes.|Designed to direct behavior or compliance. Example: "Authorized Personnel Only" signs.
+Explain **Confidentiality** in the CIA Triad.|Preventing disclosure of info to unauthorized individuals.
+Explain **Integrity** in the CIA Triad.|Ensuring messages or data cannot be modified without detection (hashing).
+Explain **Availability** in the CIA Triad.|Ensuring systems and data are accessible when needed ("Keep shit up").
+Explain **Non-Repudiation**.|Proof of origin; verifying data hasn't changed and the sender cannot deny sending it (Digital Signatures).
+Explain **Authentication** in AAA.|Verifying identity (passwords, bio-metrics).
+Explain **Authorization** in AAA.|Determining what a user has access to based on their identity.
+Explain **Accounting** in AAA.|Tracking resources used (logs, login times).
+Explain **Gap Analysis**.|Comparing where your security posture is now vs. where you want it to be (baseline vs. goal).
+Explain the core principle of **Zero Trust**.|"Never trust, always verify." Authenticate every time a resource is accessed.
+Explain the **Data Plane** in Zero Trust.|Processes frames, packets, and network data.
+Explain the **Control Plane** in Zero Trust.|Manages policies and rules; determines how packets are forwarded.
+Explain **Adaptive Identity**.|Examining identity context based on IP, connection type, and user behavior (clicks) to grant access.
+Explain a **Policy Enforcement Point (PEP)**.|The device (firewall/switch) where all network traffic passes through to be allowed or denied.
+Explain a **Policy Decision Point (PDP)**.|The engine that makes the decision to allow/deny traffic and instructs the PEP.
+Explain a **Honeypot**.|A decoy system designed to attract attackers and keep them trapped in a virtual environment.
+Explain a **Honeytoken**. |A piece of data (like fake API credentials) that alerts administrators if someone attempts to use it.
+Explain the **Change Management Process** (3 main steps).|1. Formal request form. 2. Impact Analysis. 3. Technical implementation (with rollback plans).
+Explain **Symmetric Encryption**.|Using a single shared key to both encrypt and decrypt data. (Fast, but key exchange is risky).
+Explain **Asymmetric Encryption**.|Using a Key Pair (Public and Private). Public encrypts, Private decrypts.
+Explain **Transport Encryption**.|Encrypting data while it is moving over the network (HTTPS, TLS, VPN).
+Explain **Out-of-Band Key Exchange**.|Exchanging keys without using the network (e.g., via telephone or physical courier).
+Explain a **TPM (Trusted Platform Module)**.|A cryptographic processor on the motherboard that stores unique keys and assists in boot security.
+Explain an **HSM (Hardware Security Module)**.|A dedicated physical device/plugin card used to manage and store encryption keys.
+Explain **Obfuscation**.|Making code or data difficult for humans to read (e.g., hiding data in images).
+Explain **Steganography** (Covertext).|Hiding information within another file, such as an image.
+Explain **Tokenization**.|Replacing sensitive data with a non-sensitive equivalent (token).
+Explain the primary purpose of **Hashing**.|To verify Integrity (detect changes in data).
+Explain a **Salt** in password security.|Random data added to a password before hashing to prevent rainbow table attacks.
+Explain a **Rainbow Table**.|A pre-computed list of every possible hash for specific inputs, used to crack passwords.
+Explain a **Digital Signature**.|A hash of a message encrypted with the sender's Private Key. Proves Integrity and Authentication.
+Explain a **Blockchain**.|A distributed ledger where everyone holds a copy of the transactions.
+Explain the role of a **CA (Certificate Authority)**.|An entity that issues, signs, and manages digital certificates.
+Explain the **Root of Trust**.|The central anchor of trust (like a Root CA) that allows all other certificates to be trusted.
+Explain a **CSR (Certificate Signing Request)**.|A request sent to a CA containing a public key and identity info to get a certificate generated.
+Explain **SAN (Subject Alternative Name)**.|A field in a certificate that allows it to secure multiple domains or subdomains (wildcards).
+Explain a **CRL (Certificate Revocation List)**.|A list of certificates that have been revoked by the CA before their expiration.
+Explain **OCSP Stapling**.|The web server checks the certificate status (OCSP) and sends ("staples") the status to the client during the handshake.
+Explain an **APT (Advanced Persistent Threat)**.|A threat actor (often nation-state) that stays undetected in a network for a long period.
+Explain **Typosquatting**.|Registering domains that are very similar to popular sites (e.g., goggle.com) to catch user errors.
+Explain **Pretexting**.|Creating a fabricated scenario (lying) to get a victim to divulge information.
+Explain a **Watering Hole Attack**.|Compromising a specific website that a target group is known to visit regularly.
+Explain **DLL Injection**.|Forcing a running process to load a malicious Dynamic Link Library (DLL) to run code.
+Explain a **Buffer Overflow**.|Writing more data to a memory buffer than it can hold, potentially crashing the system or executing code.
+Explain a **Race Condition (TOCTOU)**.|Time-of-Check to Time-of-Use. Exploiting the gap between checking permissions and executing an action.
+Explain **SQL Injection**.|Inserting malicious SQL queries into input fields to manipulate backend databases.
+Explain **XSS (Cross-Site Scripting)**.|Injecting malicious scripts (JavaScript) into a trusted website that execute in a user's browser.
+Explain **Reflected (Non-Persistent) XSS**.|The malicious script is embedded in a link and executes immediately when the victim clicks it.
+Explain **Persistent XSS**.|The malicious script is stored on the server (e.g., in a forum post) and executes for anyone who views it.
+Explain **VM Escape**.|An attack where a user breaks out of a Virtual Machine to access the host hypervisor or other VMs.
+Explain **Directory Traversal**.|Manipulating file paths (../) to access files outside the intended web root directory.
+Explain a **Zero-Day Vulnerability**.|A software flaw that is unknown to the vendor and has no patch available.
+Explain a **Logic Bomb**.|Malware that remains dormant until a specific event or date triggers it.
+Explain a **Rootkit**.|Malware that embeds itself deep in the OS (kernel level) to hide its presence.
+Explain **DNS Poisoning**.|Corrupting DNS cache data to redirect users to a malicious IP address.
+Explain **Domain Hijacking**.|Taking control of a domain's registration to point it to a different server.
+Explain an **On-Path Attack (Man-in-the-Middle)**.|An attacker sits between two devices, intercepting and relaying traffic without their knowledge.
+Explain a **Replay Attack**.|Capturing legitimate data (like a hash) and re-sending it later to impersonate the user.
+Explain **CSRF (Cross-Site Request Forgery)**.|Tricking a user's browser into executing an unwanted action on a site where they are currently logged in.
+Explain a **Birthday Attack**.|A cryptographic attack that exploits hash collisions (probability of two inputs having the same hash).
+Explain a **Downgrade Attack**.|Forcing a system to abandon a high-quality mode (HTTPS) for a lower-quality one (HTTP).
+Explain **EDR (Endpoint Detection and Response)**.|Tools that monitor endpoints for suspicious behavior and can automatically isolate systems or rollback changes.
+Explain **Data Loss Prevention (DLP)**.|Systems designed to detect and block sensitive data (PII) from leaving the network.
+Explain **IaaS (Infrastructure as a Service)**.|Cloud model where you rent the hardware/network, but manage the OS and Apps (e.g., AWS EC2).
+Explain **PaaS (Platform as a Service)**.|Cloud model where the OS is managed by the provider; you manage the App and Data.
+Explain **SaaS (Software as a Service)**.|Cloud model where the provider manages everything; you just use the software (e.g., Gmail).
+Explain **IaC (Infrastructure as Code)**.|Managing and provisioning infrastructure through machine-readable definition files rather than physical hardware config.
+Explain **FaaS (Function as a Service)**.|Serverless computing where you execute individual functions triggered by events.
+Explain **VLAN (Virtual LAN)**.|Logically separating a network into different broadcast domains on the same physical switch.
+Explain **SDN (Software Defined Networking)**.|Separating the control plane (software) from the data plane (hardware) for centralized management.
+Explain **Containerization (Docker)**.|Bundling an application with only its dependencies (no full OS), sharing the host OS kernel.
+Explain **SCADA / ICS**.|Industrial Control Systems used to manage physical equipment (power plants, manufacturing).
+Explain an **Air Gap**.|Physically isolating a network from the internet and other unsecured networks.
+Explain a **Forward Proxy**.|A server that sits in the internal network and makes requests to the internet on behalf of users.
+Explain a **Reverse Proxy**.|A server that sits at the network edge and handles requests from the internet to internal servers.
+Explain **Active/Active Load Balancing**.|All servers are active and sharing the load simultaneously.
+Explain **Active/Passive Load Balancing**.|One server handles traffic while another waits on standby for a failure.
+Explain **802.1X**.|A port-based network access control standard that forces authentication before network access is granted.
+Explain **Data at Rest**.|Data stored on a hard drive or server (protect with Full Disk Encryption).
+Explain **Data in Transit**.|Data moving across the network (protect with TLS/VPN).
+Explain **Data in Use**.|Data currently in memory or being processed (decrypted).
+Explain **High Availability (HA)**.|Ensuring a system remains operational and accessible, often via clustering or redundancy.
+Explain a **Hot Site**.|A recovery site with a full exact replica of the data center, ready to go immediately.
+Explain a **Cold Site**.|A recovery site with empty space/building but no hardware or data.
+Explain a **Warm Site**.|A recovery site with some hardware but requires data to be restored before use.
+Explain a **Tabletop Exercise**.|A discussion-based drill where a team talks through the steps of an incident response plan.
+Explain **WPA3-SAE**.|Simultaneous Authentication of Equals. Replaces the 4-way handshake to prevent offline dictionary attacks.
+Explain **RADIUS**.|A protocol for centralized Authentication, Authorization, and Accounting (AAA).
+Explain **Static Application Security Testing (SAST)**.|Analyzing source code for vulnerabilities without running the application.
+Explain **Fuzzing**. |Sending random, invalid data to an application to cause a crash or expose vulnerabilities.
+Explain **OSINT (Open Source Intelligence)**.|Gathering data from publicly available sources (social media, websites).
+Explain **Lateral Movement**.|Moving through a network from a compromised system to other systems to gain more access.
+Explain **CVSS (Common Vulnerability Scoring System)**.|A 0-10 scale used to rate the severity of vulnerabilities.
+Explain a **SIEM (Security Information and Event Management)**.|A system that aggregates and correlates logs from various security devices to detect incidents.
+Explain **Agentless Scanning**.|Scanning a device for vulnerabilities without installing permanent software on it.
+Explain **SNMP (Simple Network Management Protocol)**.|A protocol used to collect statistics and manage network devices.
+Explain **NetFlow**.|A standard for collecting IP traffic information and monitoring network flow data.
+Explain an **Implicit Deny**.|The default firewall rule that blocks any traffic not explicitly allowed.
+Explain **SPF (Sender Policy Framework)**.|A DNS record that lists which mail servers are authorized to send email for a domain.
+Explain **DKIM (DomainKeys Identified Mail)**.|Adding a digital signature to emails to verify they were not altered in transit.
+Explain **DMARC**.|A policy that uses SPF and DKIM to determine what to do with emails that fail validation.
+Explain **Sideloading**.|Installing applications on a mobile device from a source other than the official app store.
+Explain **Jailbreaking/Rooting**.|Removing manufacturer restrictions on a mobile device to gain full administrative access.
+Explain **SSO (Single Sign-On)**.|Using one set of credentials to access multiple applications.
+Explain **LDAP (Lightweight Directory Access Protocol)**.|A protocol used to access and manage directory information (like Active Directory).
+Explain **SAML (Security Assertion Markup Language)**.|An XML-based standard for exchanging authentication data (often used for SSO).
+Explain **MAC (Mandatory Access Control)**.|The strictest access model where the OS/Admin limits access based on labels/clearance.
+Explain **DAC (Discretionary Access Control)**.|Access model where the owner of the data decides who has access.
+Explain **RBAC (Role-Based Access Control)**.|Access allowed based on a user's job function or title.
+Explain **Chain of Custody**.|Documentation that tracks the handling of evidence to ensure it hasn't been tampered with.
+Explain **Legal Hold**.|A legal order to preserve all relevant electronically stored information (ESI).
+Explain **Port 21** function.|**FTP Control**. Used to establish the connection and send commands (TCP).
+Explain **Port 20** function.|**FTP Data**. Used for the actual transfer of files (TCP).
+Explain **Port 22** function.|**SSH (Secure Shell)**. Encrypted remote login. Also used for SFTP and SCP.
+Explain **Port 23** function.|**Telnet**. Unencrypted remote login (Insecure).
+Explain **Port 25** function.|**SMTP**. Simple Mail Transfer Protocol. Sending email between servers.
+Explain **Port 53** function.|**DNS**. Resolves domain names to IPs. Uses UDP for queries, TCP for zone transfers.
+Explain **Port 69** function.|**TFTP**. Trivial FTP. No encryption/auth. Used for simple boot files (UDP).
+Explain **Port 80** function.|**HTTP**. Unencrypted web traffic.
+Explain **Port 443** function.|**HTTPS**. Encrypted web traffic (TLS/SSL).
+Explain **Port 88** function.|**Kerberos**. Network authentication protocol using tickets and a KDC.
+Explain **Port 110** function.|**POP3**. Receiving email (downloads and deletes from server). Unencrypted.
+Explain **Port 995** function.|**POP3S**. Encrypted POP3.
+Explain **Port 143** function.|**IMAP**. Receiving email (syncs across devices). Unencrypted.
+Explain **Port 993** function.|**IMAPS**. Encrypted IMAP.
+Explain **Port 119** function.|**NNTP**. Network News Transfer Protocol. Unencrypted.
+Explain **Port 135** function.|**Microsoft RPC Endpoint Mapper**. Maps RPC services to ports (Vulnerable/Recon target).
+Explain **Port 137** function.|**NetBIOS Name Service**. (UDP).
+Explain **Port 139** function.|**NetBIOS Session Service**. (TCP).
+Explain **Port 161** function.|**SNMP**. Used by the manager to poll devices for status (UDP).
+Explain **Port 162** function.|**SNMP Trap**. Used by devices to send unsolicited alerts to the manager (UDP).
+Explain **Port 3389** (Standard Port not in notes, but implied by RDP).|**RDP**. Remote Desktop Protocol.
+Define **APT**.|Advanced Persistent Threat.
+Define **ARO**.|Annualized Rate of Occurrence. (Frequency of risk).
+Define **ALE**.|Annualized Loss Expectancy. (Total monetary loss per year).
+Define **MTTR**.|Mean Time To Repair. (Average time to fix a broken component).
+Define **MTBF**.|Mean Time Between Failures. (Reliability of a product).
+Define **RPO**.|Recovery Point Objective. (Max age of files/data needed to restore; "How much data can we lose?").
+Define **RTO**.|Recovery Time Objective. (Max time allowed to restore the service; "How long can we be down?").
+Define **SLA**.|Service Level Agreement. (Specific technical expectations/uptime between parties).
+Define **BPA**.|Business Partners Agreement.
+Define **MOU/MOA**.|Memorandum of Understanding/Agreement. (Broad goals, less binding than SLA).
+Define **CASB**.|Cloud Access Security Broker. (Policy enforcement point between on-prem and cloud).
+Define **SWG** (Implied by content blocking).|Secure Web Gateway.
+Explain the **"Active Recall"** technique mentioned in your notes.|Reading a question and looking for 1 subtle keyword or phrase that points to the exact answer.
