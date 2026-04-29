@@ -16,7 +16,7 @@
 + cybercraft - Security+ PBQ Playlist
 + Security Controls - on there a lot 
 + Active Recall
-+ 1 Subtle keyword or phrase that points to the exact question - read like ur searching for all the details. one keyword is "there on purpose" 
++ 1 subtle keyword or phrase that points to the exact question - read like you're searching for all the details. one keyword is "there on purpose"
 
 ## notes
 
@@ -35,7 +35,7 @@ each control category has a different example for each type
 
 deterrent - warning signs etc (splash screen) 
 detective control - alarm motion detector
-corrective - fire extinfuisher 
+corrective - fire extinguisher
 directive - do something processes (authorized personnel only)
 
 
@@ -44,12 +44,12 @@ directive - do something processes (authorized personnel only)
 1. Confidentiality
 + prevent disclosure of info to unauthorized individuals
 2. Integrity
-+ messages cant be modified without detection
++ messages can't be modified without detection
 + hashing
 + certs
 + non-repudiation - proof of integrity
 3. Availability
-+ keep shit up
++ keep systems up
 + 
 
 ### sep
@@ -57,14 +57,14 @@ directive - do something processes (authorized personnel only)
 + verify data does not change
 + hash
 - fingerprint 
-- doesnt associate data with an individual
+- doesn't associate data with an individual
 + proof of origin
 
 
 ### AAA
 
 + Auth 
-- password or other auth facrotrs
+- password or other auth factors
 + Authorization
 - based on identity and auth what do you have access to?
 + Accounting
@@ -77,21 +77,21 @@ directive - do something processes (authorized personnel only)
 ### gap 
 
 + where you are vs where you want to be
-+ baseline, NIST 800-171 PRotecting CUI in nonfed systems
++ baseline, NIST 800-171 Protecting CUI in nonfed systems
 + ISO/IEC 27001
 + baseline of employees
 + compare existing systems
-+ analysis report on access control, etc, gap aanalysis
++ analysis report on access control, etc, gap analysis
 + need a path to get to where we want to be
 
 ### zero trust
 
-+ authenticate everytime you want to get to another resource
++ authenticate every time you want to get to another resource
 + nothing is trusted, everything is using some type of security check 
 + split network into *functional planes*
-- data plane proceess frames packets and network data
-- control plane: ploicies and ruels, determine how packets should be forwarded, routing tables
-+ adapive identity: examine identity based on IP, type of connection, clicks, etc
+- data plane processes frames, packets, and network data
+- control plane: policies and rules, determine how packets should be forwarded, routing tables
++ adaptive identity: examine identity based on IP, type of connection, clicks, etc
 + threat scope reduction
 + *Policy Driven Access Control* : set of rules
 + Security zones: where you from where you going
@@ -101,17 +101,17 @@ directive - do something processes (authorized personnel only)
 - could be multiple devices
 + **Policy Decision Point**: PEP gives data to PDP and PDP makes decision. 
 - Policy Engine
-- Policy Administrator: gvenereates access tokens or creds, tells PEP to allow or disallow
+- Policy Administrator: generates access tokens or creds, tells PEP to allow or disallow
 
 ### physical security
 
 + barricade / bollard
 + access control vestibules
 + fence
-+ secufity cameras
++ security cameras
 + id 
 + lighting 
-+ infared 
++ infrared
 + pressure, microwave, ultrasonic sensors
 
 ### deception and disruption
@@ -127,7 +127,7 @@ directive - do something processes (authorized personnel only)
 1. formal change process form
 a. scope, schedule, systems affected, analyze risk, stakeholders
 2. impact analysis 
-a. fix doesnt fix anything, breaks something else, data corruption, etc. 
+a. fix doesn't fix anything, breaks something else, data corruption, etc.
 b. sandbox testing environment
 3. technical change management:
 a. allow list deny list.
@@ -138,9 +138,9 @@ d. documentation goes out of date without doc process - include in change manage
 ### pub key infrastructure
 
 + PKI: the CA binds keys
-+ **symmetric key encryption** : a single shared key, encrypt with key, decrypt with key. if it get sout ur fucked. doesnt scale well
-+ **asymmetric**: private - one device has. pub key is available to everytone
-- you cant derive the private key from the public key
++ **symmetric key encryption** : a single shared key, encrypt with key, decrypt with key. if it gets out you're in trouble. doesn't scale well
++ **asymmetric**: private - one device has it. pub key is available to everyone
+- you can't derive the private key from the public key
 
 
 ### encrypt data
@@ -155,43 +155,43 @@ d. documentation goes out of date without doc process - include in change manage
 ### key exchange
 
 + out of bound symmetric key
-- dont use the network, some other method (suitcase) 
+- don't use the network, some other method (suitcase)
 - telephone et
 + inband key exchange 
 - additional encryption
-- asymmewtric encryption to send a key over 
+- asymmetric encryption to send a key over
 
-### encryptiuon tech
+### encryption tech
 
 + TPM
-- cryptiographic processor
+- cryptographic processor
 - unique keys during manufacturing
 + HSM
 - Hardware security module 
 - store all of the encryption keys 
-- plugin card for cryptiographic functions
-+ key mangement system
+- plugin card for cryptographic functions
++ key management system
 
 
 ### obfuscation
 
-+ hide shit within the imaage - covertext
++ hide data within the image - covertext
 + embed messages in tcp packets
 + tokenization 
 
 ### hashing
 
 + integrity
-+ can be a digital signiture - nonrepud, auth, integrity
++ can be a digital signature - nonrepud, auth, integrity
 + sha256 - 256 bit hex characters
-+ collision - MD5 had a collisison problem in 1996
++ collision - MD5 had a collision problem in 1996
 + verify document is the original - integrity
 + salt - random data added to a password when hashing. every user gets their own random salt ? 
 + rainbow tables - every possible hash associated with inputs
-+ digitial signature - prove the message was not changed - integrity
++ digital signature - prove the message was not changed - integrity
 + prove source - auth
-+ signature isnt fake - notn repudiation
-+ sign with private jkey verify with pub
++ signature isn't fake - non-repudiation
++ sign with private key verify with pub
 
 ### blockchain
 
@@ -200,7 +200,7 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### certs
 
-+ public key and digitial signature
++ public key and digital signature
 + dig certificate - CA signs and trusts
 + Web of Trust - multiple individuals sign cert
 + X.509 standard format
@@ -209,7 +209,7 @@ d. documentation goes out of date without doc process - include in change manage
 + **CA** 
 - trust the CA therefore trust the website
 - CSR -> CA 
-- you can be your own CA - seems fun
+- you can be your own CA - seems useful for labs
 -- openCA
 + *SAN* subject alt name - wildcard certificate . any device that has the domain name in SAN. lots of \*.x.live
 + CRL - list of all certs that have been revoked. 
@@ -236,13 +236,13 @@ d. documentation goes out of date without doc process - include in change manage
 + Wired
 - No 802.1X
 + Bluetooth 
-- Recconnaissance
+- reconnaissance
 + Open port for TCP/ UDP
 
-### phisihing
+### phishing
 
 + typosquatting
-+ pretexting, lying story shit
++ pretexting, made-up story
 + Smishing, Vishing
 
 ### watering hole attack
@@ -258,13 +258,13 @@ d. documentation goes out of date without doc process - include in change manage
 ### buffer overflow
 
 + additional memory flows into another application. 
-+ takes time to avoid fcrashing things or make it do what you want. hard
++ takes time to avoid crashing things or make it do what you want. hard
 + repeatable overflow
 
 
-### race conditiion
+### race condition
 
-+ TOCTOU - time o check to time of use account. in between these two do shit
++ TOCTOU - time of check to time of use. in between those two, do something
 
 ### operating system vulnerabilities
 
@@ -272,7 +272,7 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### sql injection
 
-+ structures query language
++ structured query language
 + can control all data in database
 
 ### cross-site-scripting XSS
@@ -287,13 +287,13 @@ d. documentation goes out of date without doc process - include in change manage
 ### hardware vulnerabilities
 
 + IoT  devices are vulnerable
-+ EOL -> this doesnt mean its done updating, but no longer selling the product
++ EOL -> this doesn't mean it's done updating, but no longer selling the product
 + EOSL 
 
-### virtualization vulnerabilties
+### virtualization vulnerabilities
 
-+ local privelige escalation
-+ commandinjection
++ local privilege escalation
++ command injection
 + information disclosure 
 + VM Escape -> getting to another vm on same hypervisor
 + Data can be inadvertently shared between VMs. RAM is shared
@@ -301,10 +301,10 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### cloud specific vulnerabilities
 
-+ Denail of Service (DOS) DDoS 
++ Denial of Service (DoS) DDoS
 + Directory Traversal - bad
 + Remote code execution
-+ Need to make sure all applications hav ebeen properly patched
++ Need to make sure all applications have been properly patched
 
 
 ### misconfiguration vulnerabilities
@@ -312,9 +312,9 @@ d. documentation goes out of date without doc process - include in change manage
 + open permissions
 + unsecured admin accounts
 + unencrypted protocols: TELNET, FTP, SMTP, IMAP
-+ Packetcapture to view if packet is encrypted or not. 
-- SSh SFTP, is encrypted.
-+ looks for devices with Mirai botenet
++ packet capture to view if packet is encrypted or not.
+- SSH, SFTP is encrypted
++ looks for devices with Mirai botnet
 + Services will open ports 
 - a little bit of access into a section of your server
 + firewall 
@@ -341,7 +341,7 @@ d. documentation goes out of date without doc process - include in change manage
 
 + virus replicates itself
 + reproduces through file system or network - may not cause any issue until way spread out 
-+ fileless ooperates in memory - never detected when it is not in exe format
++ fileless operates in memory - never detected when it is not in exe format
 + adds autostart to get going again
 + worm runs without any user intervention 
 + worm replicates itself - worst 
@@ -357,7 +357,7 @@ d. documentation goes out of date without doc process - include in change manage
 ### other malware types
 
 + keylogger
-+ logic bomb -> dormant until a specific event occurrs
++ logic bomb -> dormant until a specific event occurs
 + rootkit -> hides within the kernel of the operating system, part of the OS
 
 ### physical attacks
@@ -370,12 +370,12 @@ d. documentation goes out of date without doc process - include in change manage
 ++ overload service
 + competitive advantage - often  a smokescreen 
 + friendly DoS
-+ NTP, DNS, IMCP, gives more information than we send -> each request sends back more characters. send these non stop to somoene
++ NTP, DNS, ICMP, gives more information than we send -> each request sends back more characters. send these nonstop to someone
 
 
 ### DNS attack
 
-+ dns posining - modify DNS server
++ dns poisoning - modify DNS server
 + modify host files send fake response to  a valid DNS request
 + MIM attack 
 + Domain Hijacking - take control of domain registration -> send users somewhere. 
@@ -389,10 +389,10 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### on-path attacks
 
-+ sit inbetween two devices and read all data (MAN IN THE MIDDLE ATTACK)
++ sit in between two devices and read all data (man-in-the-middle attack)
 + redirects your traffic - invisible for victims
-+ arp posining - on local subnet - arp no security
-+ arp posoning - arp request asking for mac address, laptop caches mac address (dont want to arp reqeuest everytime), attacker 
++ arp poisoning - on local subnet - arp has no security
++ arp poisoning - arp request asking for mac address, laptop caches mac address (don't want to arp request every time), attacker
 + on path browser attack 
 
 ### replay attack 
@@ -405,24 +405,24 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### malicious code 
 
-### application attakck
+### application attack
 
 + code injection, buffer overflow
-+ replay attack - replaying password hash or usser id - two different attacks used together 
++ replay attack - replaying password hash or user id - two different attacks used together
 + Horizontal _ USER A -> USER B
-+ Cross Site Requests -> loads texxt from server, video, instagram, etc.  
++ Cross Site Requests -> loads text from server, video, instagram, etc.
 + cross site request forgery - XSRF, CSRF (sea surf) 
-+ browser makes requests on your behalf onto your facebook or someshit. 
++ browser makes requests on your behalf onto your Facebook or something.
 
 ### cryptographic attacks
 
 + birthday attack - two students sharing a birthday. has collision. brute force . hash value same for two different plaintexts. 
 + downgrade attack - use a weaker . ssl stripping - on path attack. strips away the S from http. attacker sends https after 
-+ hash passowrds
++ hash passwords
 
-### pasword attaacks
+### password attacks
 
-### indicators of comprimise
+### indicators of compromise
 
 ### hardening
 
@@ -430,55 +430,55 @@ d. documentation goes out of date without doc process - include in change manage
 + FDE - Encrypt everything on the device
 + Encrypt all network - using a VPN  - https
 + EDR - Endpoint detection and response
-+ detect threadts with machine learning , investigate the threat  - root cause analysis
-+ repond to threat, isolate systen, roll back to older config, API driven
++ detect threats with machine learning, investigate the threat - root cause analysis
++ respond to threat, isolate system, roll back to older config, API driven
 + Host based firewall - allow or disallow
 + Host Based iNtrusion Prevention System HIPS - built into endpoint protection software
-+ uses heuristics, behavioral, buffer overflow writing files to the window foler
-+ NGFW - Next Gneeration Fire Wall 
++ uses heuristics, behavioral, buffer overflow, writing files to the Windows folder
++ NGFW - Next Generation Firewall
 + change default configuration
 
 ### cloud infrastructure
 
 + IaaS, PaaS, SaaS
-+ Matrix of responsibilites
++ Matrix of responsibilities
 + IaC - configuration and defining servers network and applications
 + FaaS - Function as a Service  - accessing individual functions from an application
-+ OS doesnt matter, justusing the functions- evenbt triggered and ephemeral
-+ Microservice - APIs - API is the flue for the pmicroservices
++ OS doesn't matter, just using the functions - event triggered and ephemeral
++ Microservice - APIs - API is the glue for the microservices
 
 
 ### network infrastructure concepts
 
-+ physical isolation - dont talk to eachother. 
-+ VLAN - serpated logically canot communicate between a vlan without a layer 3 device
-+ SDN - Software Defnied Networking - planes of operations
++ physical isolation - don't talk to each other
++ VLAN - separated logically, cannot communicate between a VLAN without a layer 3 device
++ SDN - Software Defined Networking - planes of operations
 + Data Plane, Control Plane, Management PLane
-+ Split the functions int logoical unit
++ Split the functions into logical units
 
 + Data PLane - process network frames and packets, forwarding, trunking
-+ Control Plane - routing tabels, session tables, NAT tables, dynamic routing protocol updates
-+ Applicaiton Layer - ssh browser api , configuring the device, application tells control and data wat to do  DCA
++ Control Plane - routing tables, session tables, NAT tables, dynamic routing protocol updates
++ Application Layer - ssh browser api, configuring the device, application tells control and data what to do  DCA
 
 
 ### other infrastructure concepts
 
-+ containerization - docker containerizes each application. contains everything u need except the os
++ containerization - docker containerizes each application. contains everything you need except the os
 + SCADA - Supervisory Control and Data Acquisition System / ICS Industrial Control Systems
-+ PC manages quiment
++ PC manages equipment
 + Distributed control systems
 + Segmented from the outside
 + RTOS - Real Time Operating System - brake will be the number one important thing
-+ Nondetemrinistic operating system? 
-+ HA = High Availibity
++ nondeterministic operating system?
++ HA = High Availability
 
-### infrastruicture considerations
+### infrastructure considerations
 
 + availability - uptime
 + resilience - MTTR - mean time to repair
 + Cost - important
-+ elasticity - scalablity 
-+ computer - the compute engine - multiple thjings
++ elasticity - scalability
++ compute - the compute engine - multiple things
 
 ### secure infrastructures
 
@@ -487,41 +487,41 @@ d. documentation goes out of date without doc process - include in change manage
 + application level encryption 
 + 
 
-### intrustion prevention
+### intrusion prevention
 
-+ IPS - intrustion prevention system 
-+ checking for vulnerabilites that are moving around the network
-+ IDS - intrusion detection - jsut detects doesnt prevent
++ IPS - intrusion prevention system
++ checking for vulnerabilities that are moving around the network
++ IDS - intrusion detection - just detects, doesn't prevent
 + SPAN - switch port analyzer
 + copies traffic to IPS and place its going - just an IDS
 
 
-### network applicents
+### network appliances
 + jump server - jump server ssh to webserver - access secure network zones
-+ proxy - sits in the middle in between and sends out to internet - a megaphone basically - checks shit caching content scanning etc
-+ explicit or transparent proxy - uysers dont know about 
++ proxy - sits in the middle and sends out to internet - a megaphone basically - checks content, caching, scanning, etc.
++ explicit or transparent proxy - users don't know about it
 + NAT - internal and external ip address translate
 + HTTP is a proxy?
 + internal proxy  - forward proxy -> users make requests to proxy in network then sends to user
 + reverse proxy is the other way around
-+ load balance - large scal implementations 
-+ fault tolderance - split the load among remaining servers
-+ active/active load balance - configurable load - tcp offload - one single tcp connection between all servers - ssl offload. load balancer does the encryption and decryption - a proxy. caching  - Content Ssitching - QoS .
-+ active/passing if an actrive server fails passive takes its place
-+ port security - EAP - Extensible Autentication P{rotocol - many differntways to authentatice with RFC Stands
++ load balance - large scale implementations
++ fault tolerance - split the load among remaining servers
++ active/active load balance - configurable load - tcp offload - one single tcp connection between all servers - ssl offload. load balancer does the encryption and decryption - a proxy. caching - content switching - QoS.
++ active/passive if an active server fails passive takes its place
++ port security - EAP - Extensible Authentication Protocol - many different ways to authenticate with RFC standards
 
-+ 802.1X - you dont get access to network without authentication 
-+ RAIDUS, LDAP, TACASA+
++ 802.1X - you don't get access to network without authentication
++ RADIUS, LDAP, TACACS+
 + Supplicant, authenticator, auth server - 
 
 ### network layers
 
-1. Physical Layer - transmits raw bit stram over physical medium - cables
-2. Data Link Lyaer - Defines the format of data on network = ethernet, wifi, mac addessses
-3. NEtwork Layer- which physical path it will take = ip and routesrs
-4. Transport Layer - using TCP / UDP trasmit data = tcp and udp
-5. Session Layer  - maintains conncections and repsonsible for ports and sessions = NEtBIOS / RPC keeping u logged in
-6. Presentation Layer - ensurs data is usable and data encryption  occurs = SSL / TLS JPEG/PNG
+1. Physical Layer - transmits raw bit stream over physical medium - cables
+2. Data Link Layer - Defines the format of data on network = ethernet, wifi, mac addresses
+3. Network Layer - which physical path it will take = IP and routers
+4. Transport Layer - using TCP / UDP to transmit data = tcp and udp
+5. Session Layer - maintains connections and responsible for ports and sessions = NetBIOS / RPC keeping you logged in
+6. Presentation Layer - ensures data is usable and data encryption occurs = SSL / TLS JPEG/PNG
 7. Application layer -  =Discord
 ### data types
 
@@ -533,23 +533,23 @@ d. documentation goes out of date without doc process - include in change manage
 
 + data at rest - should encrypt
 + data in transit - not much protection as it travels FIREWALL or IPS - Intrusion Prevention System
-+ TLS _ Transport Layer Security
-+ IPSec - internet protocol securituy
-+ data in use is decryupted - target corp
-+ GDPR -- General Data pRocection Regulation - any data about EU citizens must be stored in EU 
++ TLS - Transport Layer Security
++ IPSec - internet protocol security
++ data in use is decrypted - target corp
++ GDPR -- General Data Protection Regulation - any data about EU citizens must be stored in the EU
 
 
 ### protecting data
 
 + what subnet they are on in ip 
 + confusion encrypted different than plaintext
-+ hasing - integrity
++ hashing - integrity
 
 ### resiliency 
 
-+ High availibity - HA - always on always available
-+ Server Clustering - multiple servers work as one big server - identicial operating systems
-+ loads balancer adds or rmeoves devices
++ High availability - HA - always on, always available
++ Server Clustering - multiple servers work as one big server - identical operating systems
++ load balancer adds or removes devices
 + site resiliency 
 + hot site - exact replica of data center 
 + cold site, no hardware, empty building
@@ -563,9 +563,9 @@ d. documentation goes out of date without doc process - include in change manage
 ### recovery testing
 
 +  test yourselves before an actual event
-+ Table-TOp exerciese, go through all the steps with a group of peopleoer a table
++ Tabletop exercise, go through all the steps with a group of people around a table
 + talk through a disaster
-+ Failover -bakcups
++ Failover - backups
 + Simulated attacks
 
 ### backups
@@ -578,7 +578,7 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### security baselines
 
-+ bascially the list of detailed security things
++ basically the list of detailed security things
 + active directory, MDM (?)
 + automation is the key
 + most rarely change 
@@ -586,50 +586,50 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### hardening
 
-+ hardening checkllists are from nauactuerrs
++ hardening checklists are from manufacturers
 + segment for company data and user data
-+ MDM - Mobile Device Mnaager 
-+ SCADA - Supervisory Control and Data Acquisiition System
++ MDM - Mobile Device Manager
++ SCADA - Supervisory Control and Data Acquisition System
 + ICS - 
 + RTOS - Deterministic - individual applications have to run ASAP 
 + isolate RTOS from network, minimum services running, secure communication
 + IoT devices - weak defaults
 + deploy updates quickly
-+ degmentation
++ segmentation
 +
 
 ### securing wireless and mobile
 
-+ COPE - Corporate owned persoanlly enabled
++ COPE - Corporate owned personally enabled
 + laptops and phones 
 + CYOD - Choose your own device
-+ Seperate land into cells
++ Separate land into cells
 + PAN - Personal Area Network
 
 ### wireless security settings
 
-+ MIC - Message Integrt Check
-+ WPA2 - capture the hash during the handsheck - brute force gpu based processing
-+ once u have the PSK
++ MIC - Message Integrity Check
++ WPA2 - capture the hash during the handshake - brute force gpu based processing
++ once you have the PSK
 + WPA3 - GCMP - block cipher mode 
 + GCMP - MIC, GMAC - Galois Message Auth Code
-+ SAE - no more 4 way handsheck - Simultaneous Authenetiation of Equals - Diffie Hellman derived key exchange
++ SAE - no more 4 way handshake - Simultaneous Authentication of Equals - Diffie Hellman derived key exchange
 + IEEE Standards - dragon fly handshake
 + shared password/ PSK  - Pre Shared Key
-+ Centralized Authenetiation (802.1x) 
-+ sperate creds for everyone
++ Centralized Authentication (802.1x)
++ separate creds for everyone
 + WPA3 personal - PreSharedKey
-+ WPA3 Enterprize - username and apswword
++ WPA3 Enterprise - username and password
 + AAA Server
 + Identification - username
-+ Autheneticaiton - password 
-+ Authorization - what resources do you have access ot
++ Authentication - password
++ Authorization - what resources do you have access to
 + Accounting - logging what you do 
 + RADIUS  - an AAA protocol - Remote Auth Dial-In User Service) 
 + username and password checked against a RADIUS Server
 + IEEE 802.1X - NAC - Network Access Control
 + Used in conjunction with RADIUS, LDAP, TACACS+ 
-+ EAP - Exentsible AUthentication Protocol - an autheneticator, the atuthenetication server
++ EAP - Extensible Authentication Protocol - an authenticator, the authentication server
 
 ### application security
 
@@ -640,18 +640,18 @@ d. documentation goes out of date without doc process - include in change manage
 ### asset management
 
 + acquisition / procurement process
-+ Assignment / Accounting - classificaiton ownership etc
-+ degauss - electromagnetic deletion of shit
++ Assignment / Accounting - classification ownership etc
++ degauss - electromagnetic deletion of data
 
 
 ### vuln scanning
 
-+ port scanning- what ar eopen and what are closed - what possible vulnerabilites
++ port scanning - what are open and what are closed - what possible vulnerabilities
 + identify systems
-+ lots of false positivess
++ lots of false positives
 + SAST - Static application security testing
-+ doesnt understand how shit is implmeented in the code jus tht eline 
-+ fuzzing - dynamic analaysis - fault injecting, negative testing, syntax testing, appliction crash, exception
++ doesn't understand how stuff is implemented in the code, just the line
++ fuzzing - dynamic analysis - fault injecting, negative testing, syntax testing, application crash, exception
 + some applications are distributed as a package
 + confirm package is legit
 
@@ -659,28 +659,28 @@ d. documentation goes out of date without doc process - include in change manage
 
 + stay up to date
 + OSINT - Open Source Intelligence
-+ disucssion groups, social media, etc
-+ Cyber Thraet Alliance - score submissions based oin threat, open source
-+ dark web intelligence - intrnet for transport but need specialized software
++ discussion groups, social media, etc
++ Cyber Threat Alliance - score submissions based on threat, open source
++ dark web intelligence - internet for transport but need specialized software
 + pentesting - 
 
 ### pen testing
 
-+ rules of engagment
++ rules of engagement
 + type of testing, hours, etc. 
 + what is in and out of scope
-+ try to break into the system - be cafeul can cause a ddos
-+ laterla movement once ur in the network - try to create a persistent backdoor
++ try to break into the system - be careful, can cause a DDoS
++ lateral movement once you're in the network - try to create a persistent backdoor
 
 ### analyzing vulnerabilities
 
 + false negatives , positives
 + NVD - CVSS - 0-10 scoring differing scoring for 2.0, 3.0 etc
-+ CVE - what CVE is associated with a given vulnerabilites cve.mitre.org
-+ exposure factor - how risky it is having a vulnerability on a device. based on its aviliability
++ CVE - what CVE is associated with a given vulnerability cve.mitre.org
++ exposure factor - how risky it is having a vulnerability on a device, based on its availability
 
 
-### vulnerability remidaition
+### vulnerability remediation
 
 + patching 
 + cyber security insurance policy
@@ -688,9 +688,9 @@ d. documentation goes out of date without doc process - include in change manage
 
 ### security monitoring
 
-+ authentiation, server monitoring, etc
-+ SIEM or SEM - Security Information and Event manager
-+ consolidates all of the information, firwalls, cvpns, san, etc
++ authentication, server monitoring, etc
++ SIEM or SEM - Security Information and Event Manager
++ consolidates all of the information, firewalls, vpns, san, etc
 + centralized reporting
 + correlation between diverse systems
 + takes an average of 9 months to detect a breach
@@ -700,24 +700,24 @@ d. documentation goes out of date without doc process - include in change manage
 + NGFW - Next generation firewalls
 + IPS intrusion prevention system
 + SCAP Security content automation protocol
-+ NIST National institude of standards and tech
++ NIST National Institute of Standards and Technology
 + SCAP is the language for security vulnerabilities
 + pass onto other people. patching can be automated
 + agentless runs without a formall install
 + check to see if device is in compliance, agent stays on agentless leaves after checking compliance
 + SIEM - Security information and event management - consolidate log types
 + log aggregation and data correlation
-+ DLP - Data Loss Prevention - block out certain security and shit
++ DLP - Data Loss Prevention - block out certain sensitive data
 + data leakage is found
 + SNMP - simple network management protocol
-+ MIB mangement information base
++ MIB management information base
 OID - object identifiers
 + udp/161 - poll devices
-+ SNMP collect statiics
++ SNMP collect statistics
 + SNMP expect a poll, snmp traps can be configured on the monitored devices over *udp/162*
 + CRC? 
 + NetFlow - standard collection method. 
-+ probe and collector. included in switch or router or in a seperate network probe. sometimes a tap on network sending itto a networkcollector
++ probe and collector. included in switch or router or in a separate network probe. sometimes a tap on network sending it to a network collector
 + solarwinds
 + 
 
@@ -727,7 +727,7 @@ OID - object identifiers
 + vpn between points
 + firewalls can be layer 3 device - NAT
 + NGFW - layer 7 firewall. ? 
-+ application layer gateway - deeppacket inspection . 
++ application layer gateway - deep packet inspection
 + every packet must be analyzed or categorized
 + traditional firewalls only knew what ports were being used
 + web server - 80/443
@@ -741,8 +741,8 @@ OID - object identifiers
 + icmp - ping
 + IPS - intrusion prevention system - part of a NGFW
 + - signature ?
-+ - anomaly based - baseline of whats normal then scan
-+ - list of vulnerabilites and decide if its allowed or disallowed
++ - anomaly based - baseline of what's normal then scan
++ - list of vulnerabilities and decide if it's allowed or disallowed
 + 
 
 ### content blocking
@@ -754,18 +754,18 @@ OID - object identifiers
 + - explicit proxies - need to know how to use it
 + - forward proxy , internal network
 + block based on specific url
-+ DNS filtering - dns doesnt allow user to go that website
++ DNS filtering - dns doesn't allow user to go to that website
 
 
 ### operating system security
 
 + active directory
-+ a database of everyhting on the network - on one central database - use username in the AD database
++ a database of everything on the network - one central database - use username in the AD database
 + permissions inside the AD and groups are in there
-+ group policy on certain computer / devices on manager
++ group policy on certain computers / devices on domain
 + QoS - network configuration
-+ Comprehensive control for the entier network 
-+ SELinux - discretionary acccess control DAC 
++ Comprehensive control for the entire network
++ SELinux - discretionary access control DAC
 + limit application access 
 
 ### secure protocol
@@ -789,7 +789,7 @@ OID - object identifiers
 
 ### monitoring data
 
-+ FIM file integryity monitoring 
++ FIM file integrity monitoring
 + SFC - system file checker 
 + tripwire is the linux version 
 + host based IPS
@@ -805,13 +805,13 @@ OID - object identifiers
 
 + edge vs access control. 
 + edge is done by firewall 
-+ acces scontrol - limites access to acertain data
-+ Posture assessment - what is or isnt up to date 
-+ persistent agents can monitor files and shit on the system 
-+ dissolvable agents  - no installic is required on startup 
-+ agentless nac - integrated with active directy-  done on login and logodd
++ access control - limits access to certain data
++ Posture assessment - what is or isn't up to date
++ persistent agents can monitor files and activity on the system
++ dissolvable agents - no install is required on startup
++ agentless nac - integrated with active directory - done on login and logoff
 + EDR - endpoint detection and response
-+ EDR oios macihine learning and shit
++ EDR uses machine learning and similar tooling
 + root cause analysis is done by EDR
 + automated response
 + XDR is the smarter version of EDR
@@ -820,8 +820,8 @@ OID - object identifiers
 
 
 ### identity
-+ IAM - identity and acces smanagement
-+ identitfyt licecycle management 
++ IAM - identity and access management
++ identity lifecycle management
 + access control 
 + log everything they do - fulll lifecycle
 + identity proofing
@@ -835,13 +835,13 @@ OID - object identifiers
 + SAML - security assertion markup language
 + SAML wasnt designed for mobile devices
 + saml use how do serviers comm 
-+ interoperability - use of shit with other shit
++ interoperability - use of one system with another
 
 
 ### access control
 
-+ MAC - mandatort acess control 
-+ - CUI shit
++ MAC - mandatory access control
++ - CUI data
 + - administrator designs who has access to what
 + DAC - used in most operating systems. 
 + - who has access to what designed by the owner of the data
@@ -851,7 +851,7 @@ OID - object identifiers
 
 ### passwords
 
-+ at least 8 characters 15 dats 
++ at least 8 characters, 15 days
 + just in time - elevate rights at certain point 
 
 
@@ -867,32 +867,32 @@ OID - object identifiers
 + tabletop exercise - everyone logistically stepping through the SOP, not actually doing it
 
 
-### digital foresics
+### digital forensics
 
 + RFC 3227
 + extensive notes
-+ legal hold: legal technique to preserve relevant informatrion - hold notificaitons
++ legal hold: legal technique to preserve relevant information - hold notifications
 + ESI - electronically stored information 
 + chain of custody - maintain integrity 
 + everyone who contacts evidence uses their digital signature to avoid tampering
 
 ### logs
 
-+ dns sinkhole traffic, documentation of traggic logs
-+ firewall logs - hodlds lots of data
++ dns sinkhole traffic, documentation of traffic logs
++ firewall logs - holds lots of data
 + - source/dest ip, port, disposition
 + - NGFW - applications that are in use, url categories, suspicious data
 + IPS IDS logs - ip, port, timestamp, mesg, class 
 + correlate with other network devices 
 + switches routers AP vpn hold routing updates, auth issues, or attacks
 
-### security poliocies
+### security policies
 
 + Confidentiality, Integrity, Availability
-+ AUP acceptable use policies - what is aceptable for everyone in the org
++ AUP acceptable use policies - what is acceptable for everyone in the org
 
 
-### agreemenets
+### agreements
 
 + SLA - service level agreement
 + MOU - memorandum of understanding
@@ -907,81 +907,81 @@ OID - object identifiers
 
 + Record Encryption: encrypt individual columns within the data base - some as plaintext some as encrypted text
 + Asymmetric - public and private key pair to encrypt data
-+ Key Excrow - Storage and management of decrypted keys by a third party
-+ Journaling - writes data to a temporary journal before writing the information to a database. if power is lost system acan recover the last transaction from the journal whne power is restored
-+ Backout plan - how to go back after a fuckup
++ Key Escrow - storage and management of decrypted keys by a third party
++ Journaling - writes data to a temporary journal before writing the information to a database. if power is lost system can recover the last transaction from the journal when power is restored
++ Backout plan - how to go back after a mistake
 
 
 ## acronym list
 
-1. APT - Advanced Persistent Threat: Long term xyber attack where they stay inside
+1. APT - Advanced Persistent Threat: long term cyber attack where they stay inside
 2. ARO - Annualized Rate of Occurrence: Estimated frequency that a risk will occur
-3. ASLR - Address Space Layour Randomization: Protects against buffer overflows
+3. ASLR - Address Space Layout Randomization: protects against buffer overflows
 4. AIS - Automated Indicator Sharing: exchanging threats in real time
-5. ARP - Address Resolution Protocol: MAC addres and shit
+5. ARP - Address Resolution Protocol: MAC address and related traffic
 6. AAA - Authentication, Authorization, Accounting: 
-7. AH - Authenticaiton Header: provides integrity and authentication for IP packets. This does NOT provide confidentiality (no encryption). Includes sequence numbers to prevent replay attacks
-8. ALE - Annualized Loss Expectency: Estimate total monetary loss from risk
+7. AH - Authentication Header: provides integrity and authentication for IP packets. This does NOT provide confidentiality (no encryption). Includes sequence numbers to prevent replay attacks
+8. ALE - Annualized Loss Expectancy: Estimate total monetary loss from risk
 9. AUP - Acceptable Use Policy
-10. BCP - Business Continutity Plan
-11. BGP - Border Gateway Protocol: BGP looks at path attributed to decide best route across teh entire internet. 
+10. BCP - Business Continuity Plan
+11. BGP - Border Gateway Protocol: BGP looks at path attributes to decide best route across the entire internet.
 12. BIA - Business Impact Analysis
 13. BPA - business partners agreement
-14. BPDU - Bridge Protocol Data Unit: messes sent by swwitches within a networkthat uses spanning tree protocol. The heartbeat messages containing brighe ID and mac addreess. Vote on who will be centra point of tree
+14. BPDU - Bridge Protocol Data Unit: messages sent by switches within a network that uses spanning tree protocol. The heartbeat messages contain bridge ID and mac address. Vote on who will be central point of tree
 15. CAR - Corrective Actions Report
 16. CASB - Cloud Access Security Broker: the policy enforce point for the cloud
-17. DMARC - Domain Based Message Authentation Reporting and Conformance - specifies the dispositino of emails. 
+17. DMARC - Domain Based Message Authentication Reporting and Conformance - specifies the disposition of emails.
 18. SPF - Sender Policy Framework : list of all authorized mail servers for a specific domain. legit emails from one of the servers
 19. NAC - Network access control: limit network access to only authorized users
-20. DKIM - DOmain Keys Identified Mail : provides a way to validate all digitally signed messages from a server. 
-21. MBTF - Mean Time Between Failers: how often a repairable system will fail
-22. RTO - Recovery Time Objectives : Define aset of objectives needed to restore a particular service level
-23. MTTR - Mean Time to Restore : amount of time to repair a componenet
+20. DKIM - Domain Keys Identified Mail: provides a way to validate all digitally signed messages from a server.
+21. MTBF - Mean Time Between Failures: how often a repairable system will fail
+22. RTO - Recovery Time Objective: define a set of objectives needed to restore a particular service level
+23. MTTR - Mean Time to Restore: amount of time to repair a component
 24. RPO - Recovery Point Objective: Minimum data or operational state required to categorize a system as recovered
 25. MOA - Memorandum of Agreement: formal document where both sides agree to broad set of goals and objectives 
 26. SLA - Service Level Agreement : VERY SPECIFIC expectations between  both parties
-27. PSK - Preshared key allows everyone on network to use same passwoerd when connection to network
+27. PSK - Pre-shared key allows everyone on network to use same password when connecting to network
 28. CYOD - Choose Your Own Device 
 29. COPE - Corporate Owned Personally Enabled
-30. SASE -Secure Access Service Edge : next generation VPN designedf to optimize process of secure comms to cloud devicers
+30. SASE - Secure Access Service Edge: next generation VPN designed to optimize process of secure comms to cloud devices
 31. RTOS - Real Time operating Systems  : OS for industrial equipment
-32. CRL - Certifcate Revocation list: cert has been revoked or not
-33. SCAP - Securityu Content Automation protocl : focuses on the standarfdizzation of vulnerability management across multiple srcurity tools
-34. DLP - Data Loss Preventuion
-35. RADIUS - Remote Authetnciation Dial-In SUer service autonetation protocol for commonly used to validate user credentials. 
+32. CRL - Certificate Revocation List: whether a cert has been revoked or not
+33. SCAP - Security Content Automation Protocol: focuses on the standardization of vulnerability management across multiple security tools
+34. DLP - Data Loss Prevention
+35. RADIUS - Remote Authentication Dial-In User Service: authentication protocol commonly used to validate user credentials
 36. CSP - Cloud Service Provider
-37. CSR - Certificate Signing Request - a user generates a public/private key pair. CSR is sent to the CA contianing the public key, CA verifies and signs
-38. CSRF- Cross Site Request Forgery - while bank session is active browser sends malicious requesty
-39. CSU - Channel Service Unit - CSu/DSU - hardware device that is the interface between LAN and WAN - LIKE T1 or R3. connects the digirtal line form telecom provider to the local network. ensures signal is properly formatted. protects local network from electric interference
-40. CTM - Counter Mode - block cipher mode ethat turns a block ciper into a stream cipher. GCMP is standard for WPA3, CTM is underlying method. Nonce starting value counter increments every block. Key and counter are increpted together. then XOR it. AES is used with Couinter Mode. IV / Nonce
+37. CSR - Certificate Signing Request - a user generates a public/private key pair. CSR is sent to the CA containing the public key, CA verifies and signs
+38. CSRF - Cross Site Request Forgery - while bank session is active browser sends malicious request
+39. CSU - Channel Service Unit - CSU/DSU - hardware device that is the interface between LAN and WAN - like T1 or T3. connects the digital line from telecom provider to the local network. ensures signal is properly formatted. protects local network from electric interference
+40. CTR - Counter Mode - block cipher mode that turns a block cipher into a stream cipher. GCMP is standard for WPA3, CTR is underlying method. nonce starting value counter increments every block. key and counter are encrypted together, then XOR it. AES is used with Counter Mode. IV / nonce
 41. CVE - Common Vulnerability Enumeration: 
-42. CVSS - Common vulnerability Scoring System : 0-10 scale NVD holds all thisinforamtion 
+42. CVSS - Common Vulnerability Scoring System: 0-10 scale, NVD holds all this information
 43. CYOD - Choose Your Own Device
-44. DAC - Discretionary Access Control  : owner has discretion to do whatever he wants. data owner (local privilege escalation could be an issue.) SE Linux adds mandatory access conjtrol on top of DAC
+44. DAC - Discretionary Access Control: owner has discretion to do whatever they want. data owner controls access (local privilege escalation could be an issue). SE Linux adds mandatory access control on top of DAC
 45. DBA - Database Administrator
-46. DEP - Data Execution Prevention. Bascially stops executing memory in placers that are designed for data storage only. Defense against buffer overflows and memory injections. Does this by memory marking, (non-execurable regions), blocking execution, targing vulnerabilites. Hardware and Sofrtawre versions
-47. DES - Digital Encryption Standard - Symmetric Key algorithm, now considered insecure (same single shared key for encryption and decryption) block ciper 56 bit key, fiestel network. Brute force vulnerability. 3DES is now better, but slkower than AES
-48. FN - fiestel network : split plaintext into halves and round, xor, swap, iterate
-49. DHCP - Dynamic Host Configuraiton Protocol
-50. DHE - Diffie Hellman steps: both parties aagree on a large prime number, each party creates own private key, perform matematical calculation using the public parameters and the private key, send result to tother person . By combining the received value with own private key both parties arrive at the same key
-51. DKIM - Domain Keys Identified Mail : asymmetric key encryption to add digital signature to the header of an email. Outgoing mail server signsmessage with a privat ekey -> receiveing server looks up senders public key in dns records, integrity check
-52. SPF -Sender policy framework : just a dns record of ip address authorzed to send for your domain
-53. DMARC - Domain Based Message Authentication Reporting and Conformance - policy layer for scuity (disposition, what to do with shit)
-54. DNAT - Destination Network ADdress Trnaslation : Changes the destination IP address of a packetas it passes through a router or firewall
+46. DEP - Data Execution Prevention. Basically stops executing memory in places that are designed for data storage only. Defense against buffer overflows and memory injections. Does this by memory marking, non-executable regions, blocking execution, targeting vulnerabilities. Hardware and software versions
+47. DES - Data Encryption Standard - symmetric key algorithm, now considered insecure (same single shared key for encryption and decryption) block cipher 56 bit key, Feistel network. Brute force vulnerability. 3DES is better, but slower than AES
+48. FN - Feistel network: split plaintext into halves and round, xor, swap, iterate
+49. DHCP - Dynamic Host Configuration Protocol
+50. DHE - Diffie Hellman steps: both parties agree on a large prime number, each party creates own private key, perform mathematical calculation using the public parameters and the private key, send result to other person. By combining the received value with own private key both parties arrive at the same key
+51. DKIM - Domain Keys Identified Mail: asymmetric key encryption to add digital signature to the header of an email. outgoing mail server signs message with a private key -> receiving server looks up sender's public key in dns records, integrity check
+52. SPF - Sender Policy Framework: just a dns record of IP address authorized to send for your domain
+53. DMARC - Domain Based Message Authentication Reporting and Conformance - policy layer for security (disposition, what to do with messages)
+54. DNAT - Destination Network Address Translation: changes the destination IP address of a packet as it passes through a router or firewall
 55. DPO - Data Privacy Officer
 56. DLP - Data Loss Prevention: has 3 points in use, motion, rest
-57. DSA - Digital Signature Algothm - Asymmetric encryption  , ubtegruty, atygebtuiatuib, non-repudiation
+57. DSA - Digital Signature Algorithm - asymmetric encryption, integrity, authentication, non-repudiation
 58. DSL - Digital Subscriber Line: lets us use internet and telephone at the same time
-59. EAP - Extensible Authentiation Protocl : device to negotionate authentiaction with a server regardless of what youre using. EAP-TLS (digital certs) EAP-TTLS(only server needs cert) PEAP (pencrypted tunnetl)
-60. ECV - Electronic codebook - each block is encrypted independentally with the exact same key. Can lead to identical blocks of cipher text from identical blocks of plaintext
-61. ECC - Elliptic Curve Cryptography : modern approach of older RSA methods. RSA uses large prime numbers, this is complex algebric structure of elliptic cures. smsalle key sized
+59. EAP - Extensible Authentication Protocol: way to negotiate authentication with a server regardless of what you're using. EAP-TLS (digital certs) EAP-TTLS (only server needs cert) PEAP (encrypted tunnel)
+60. ECB - Electronic Codebook - each block is encrypted independently with the exact same key. can lead to identical blocks of ciphertext from identical blocks of plaintext
+61. ECC - Elliptic Curve Cryptography: modern approach compared to older RSA methods. RSA uses large prime numbers, this uses complex algebraic structure of elliptic curves. smaller key sizes
 62. EDR - Endpoint detection and response : basically just monitoring user devices
-63. ESP - Encapsulated Security Payload : (AH Partnert) provides integirty, ESP provides encryption (confidentialiyy)
-64. ABAC - Attribute based access control - user roles, time of daym network location
+63. ESP - Encapsulated Security Payload: AH partner, provides encryption and confidentiality
+64. ABAC - Attribute based access control - user roles, time of day, network location
 65. RuBAC - Rule Based Access Control (firewall)(
-66. SMTP - Simpl eMail Transfer Protocol (it onlu piushes mail out, IMAP or POP3  actually pull the email in). 
-67. SED - Self Encrypting Device - astorage ddevice that automatically encrypts every bit of data written without needing software
-68. TPM -Trusted Platform Module - a chip on the motherboard used for boot integrity
+66. SMTP - Simple Mail Transfer Protocol (it only pushes mail out, IMAP or POP3 actually pull the email in).
+67. SED - Self Encrypting Device - a storage device that automatically encrypts every bit of data written without needing software
+68. TPM - Trusted Platform Module - a chip on the motherboard used for boot integrity
 69. IRP - Incident Response Plan
 70. Business Response Plan - BRP
 
@@ -989,23 +989,23 @@ OID - object identifiers
 
 ## ports
 
-* Port 22: The default port for ssh secure alternative to Port 23. SFTP is also here, it is the secure version of FTP and works on an encrypted tunnel here. SCP is also here  
-* Port 21: FTP COTNROL - used to transfer files from host to host with TCP. Control connection
-* Port 20: FTP DATA - used for the actual transfer of files in active mode. in passive mode a random high number port is used instead. 
-* Port 23: Telnet. Insecure. Telnet sends all data in unencrypted plaintesxt. 
+* Port 22: The default port for SSH, secure alternative to Port 23. SFTP is also here, it is the secure version of FTP and works over an encrypted tunnel. SCP is also here
+* Port 21: FTP CONTROL - used to transfer files from host to host with TCP. control connection
+* Port 20: FTP DATA - used for the actual transfer of files in active mode. in passive mode a random high number port is used instead.
+* Port 23: Telnet. Insecure. Telnet sends all data in unencrypted plaintext.
 * Port 25: SMTP - Simple Mail Transfer Protocol (SMTP) provides ability to send emails over the network
-* Port 53: DNS - Uses both TCP and UDP on the same port. UDP 53 (queries) connectionless and easy to spoof. TCP 53 - ZOne Trasfers. When you are sneidng the entire data base to another DNS server. Large and needs to be accurate. **DNS POisoning** (Cache Poisining) an attacker sends fake dns information to a resolvers cache. If successful, anyone using the dns server is redirected. 
-* Port 69: TFTP - Trivial File Transfer Protocol. UDP Based zero authentication, no encryption, only for simple get an dput operations
+* Port 53: DNS - uses both TCP and UDP on the same port. UDP 53 (queries) connectionless and easy to spoof. TCP 53 - zone transfers. when you are sending the entire database to another DNS server. large and needs to be accurate. **DNS Poisoning** (Cache Poisoning) an attacker sends fake dns information to a resolver's cache. if successful, anyone using the dns server is redirected.
+* Port 69: TFTP - Trivial File Transfer Protocol. UDP based, zero authentication, no encryption, only for simple get and put operations
 * Port 80: Entry point for HTTP - Unencrypted by default. Transmitted as plaintext, no integrity, redirect it to port 443 is the modern practice
-* Port 88: Kerberos - TCP & UDP. Uses Key Distribution Center. AS: Authentication service you provide your username and it gives you a Ticket TGT. TGS you then trade your ticket for a service ticket whenever you need a certain resource. Backbone of SSO - u keep your ticket. Mutual authenetication. 
-* Port 110: POP3 - Post Office Protocol Version 3. Legacy and should be replaced. Used by email clients to retrieve emails from a  amil server. Uses TCP. **Unencrypted** plaintext;. 995 holds POP3S the encrypted brother to this. 
-* Port 119: NNTP - Netowkr News Transfer Protocol. Usenet news articles between news servers and clients. Predates social media and forums. IT uses TCP to ensure news articles are synced. **UNENCRYPTED**
-* Port 135: Mircrosft RCP Endpoint Mapper - RPC endpoint mapper is a directory service for remote procedure calls. Connects to 135 to connect to specific server on a server. Handsoff to a dynamic portt. Uses **both TCP and UDDP**. **TCP IS MORE COMMON**. Provides **attackers with a map of your server**. Famous worms take over this. 
+* Port 88: Kerberos - TCP & UDP. uses Key Distribution Center. AS: Authentication service, you provide your username and it gives you a ticket TGT. TGS: you then trade your ticket for a service ticket whenever you need a certain resource. backbone of SSO - you keep your ticket. mutual authentication.
+* Port 110: POP3 - Post Office Protocol Version 3. legacy and should be replaced. used by email clients to retrieve emails from a mail server. uses TCP. **Unencrypted** plaintext. 995 holds POP3S, the encrypted version of this.
+* Port 119: NNTP - Network News Transfer Protocol. Usenet news articles between news servers and clients. predates social media and forums. it uses TCP to ensure news articles are synced. **UNENCRYPTED**
+* Port 135: Microsoft RPC Endpoint Mapper - RPC endpoint mapper is a directory service for remote procedure calls. connects to 135 to connect to a specific service on a server. hands off to a dynamic port. uses **both TCP and UDP**. **TCP IS MORE COMMON**. provides **attackers with a map of your server**. famous worms target this.
 * Port 137: NetBIOS Name Service UDP
 * Port 138: NetBIOS Datagram service UDP
 * Port 139: NetBIOS Session Service TCP
-* Port 143: IMAP (Internet Message Access Protocol) - access and manage emails directly on a mail server, imap keeps the messages on the server but synchronizes them across ytour devices. if you deleteon you iMac it deletes on your phoen too. TCP. 143 Is **UNENCRYPTED** by default. USERNAME AND PASSWORD ARE SENT IN PLAINTEXT. 993 is its secure brother
-* Port 161: SNMP (Simple Network Managemetn Protocol): UDP Listens for requests from the manager. NMS (network Manager System) to query devicdes for status information and change configurations. 161 sees if its asking for anything. 
+* Port 143: IMAP (Internet Message Access Protocol) - access and manage emails directly on a mail server, IMAP keeps the messages on the server but synchronizes them across your devices. if you delete on your iMac it deletes on your phone too. TCP. 143 is **UNENCRYPTED** by default. USERNAME AND PASSWORD ARE SENT IN PLAINTEXT. 993 is its secure counterpart
+* Port 161: SNMP (Simple Network Management Protocol): UDP listens for requests from the manager. NMS (network management system) queries devices for status information and configuration changes. 161 sees if it's asking for anything.
 * Port 162: SNMP UDP SNMP Traps
 
 ## Professor Messor Practice Exams:
@@ -1021,7 +1021,7 @@ OID - object identifiers
 
 2. 
 2a. Security Guard
-2b. Access Control VEstibule
+2b. Access Control Vestibule
 2c. Access Badge
 2d. Biometric - A:  Authentication token
 
@@ -1029,7 +1029,7 @@ OID - object identifiers
 3a. Physical
 3b. Managerial
 3c. Operational
-3d. Ohysical
+3d. Physical
 3e. Technical
 
 4. 
@@ -1058,7 +1058,7 @@ OID - object identifiers
 21. C
 22. C
 23. B, D
-24. (X) Deterrant scaes you away (login banner) directive is a formal document
+24. (X) Deterrent scares you away (login banner) directive is a formal document
 25. C
 26. B
 27. A (X)
@@ -1110,7 +1110,7 @@ D
 C
 37.B - Wrong. Playbook is an actual thing just a playbook, easy enough
 B
-39.A - Wrong. In Discretionary Access Control the owner controls the shit. **Administreatpr **  is in MAC (mandatory access contrl). **Group** is in role based access control. System is just useless
+39.A - Wrong. In Discretionary Access Control the owner controls access. **Administrator** is in MAC (mandatory access control). **Group** is in role based access control. System is just not the answer
 B 
 A - An MOU is an informal letter of intent (not a signed contract)
 B
@@ -1125,23 +1125,23 @@ C
 A
 A
 53B - WRONG LDAP is a (Lightweight Directory Access Protocol)( common standard for authentication. SIEM is a service that consolidates log files from different systems and can create reports based on this. Not part of the auth process
-60 - Wrong. Jump Server is for maitenance or adminstrative shit. NEVER for cloud prod environments. SD-WAN ( ANSWER). Software Definied Networking in a Wide Area Network. it basically routes data smart;y./ MPLS is the expensive wifi connection. Gold connection . 
+60 - Wrong. Jump Server is for maintenance or administrative access. NEVER for cloud prod environments. SD-WAN (ANSWER). Software Defined Networking in a Wide Area Network. it basically routes data smartly. MPLS is the expensive premium connection.
 
 Microwave sensors can detect movement across a large area
-ASymmetric encryption itself does not proof of origin
+Asymmetric encryption itself does not provide proof of origin
 
-Operational controls are like trainings, process of getting approval. SOPs and risk asseessments or plalnning are considered managerial controls. 
+Operational controls are like trainings, process of getting approval. SOPs and risk assessments or planning are considered managerial controls.
 
-902.1X requires authentication. It is a port based network access control 
+802.1X requires authentication. It is a port based network access control
 
-PFS - perfect forward secrecy - uniquie session key derived for each connection 
+PFS - perfect forward secrecy - unique session key derived for each connection
 
 
 
 #### RADIUS
 
 UDP (Port 1812/1813)
-encrypys only the password in the access request packet not the whole payload. auth and authorization in one process. used for vpns wifi etc
+encrypts only the password in the access request packet, not the whole payload. auth and authorization in one process. used for vpns, wifi, etc
 
 #### KERBEROS
 Port 88

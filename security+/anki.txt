@@ -8,9 +8,9 @@ Explain a **Corrective Control** and give the example from your notes.|Designed 
 Explain a **Directive Control** and give the example from your notes.|Designed to direct behavior or compliance. Example: "Authorized Personnel Only" signs.
 Explain **Confidentiality** in the CIA Triad.|Preventing disclosure of info to unauthorized individuals.
 Explain **Integrity** in the CIA Triad.|Ensuring messages or data cannot be modified without detection (hashing).
-Explain **Availability** in the CIA Triad.|Ensuring systems and data are accessible when needed ("Keep shit up").
+Explain **Availability** in the CIA Triad.|Ensuring systems and data are accessible when needed ("Keep systems up").
 Explain **Non-Repudiation**.|Proof of origin; verifying data hasn't changed and the sender cannot deny sending it (Digital Signatures).
-Explain **Authentication** in AAA.|Verifying identity (passwords, bio-metrics).
+Explain **Authentication** in AAA.|Verifying identity (passwords, biometrics).
 Explain **Authorization** in AAA.|Determining what a user has access to based on their identity.
 Explain **Accounting** in AAA.|Tracking resources used (logs, login times).
 Explain **Gap Analysis**.|Comparing where your security posture is now vs. where you want it to be (baseline vs. goal).

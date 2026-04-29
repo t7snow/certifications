@@ -2,7 +2,7 @@
 
 ## 1.0
 
-+ tehcnical
++ technical
 hardware / software
 + managerial
 policies and procedures, planning and assessment methods
@@ -10,7 +10,6 @@ policies and procedures, planning and assessment methods
 day to day operations. implemented by people (people enforcing managerial controls)
 + physical
 
-security controls - safeguard and cuontermeasures 
-
+security controls - safeguards and countermeasures
 
 
