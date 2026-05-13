@@ -103,4 +103,59 @@ Ideal test date: June 01.
 
 ### misc
 + 22 - ssh, 21 - ftp, 22 - sftp, 80 http, 443 - https, 3389 - remote desktop protocol (windows instances) 
++ timeout => always a EC2 security rule most likely. 
++ outbound rules: 
+
+## ssh 
++ EC2 Instance Connect - web browser good for all. only works for amazon linux 2. 
++ EC2 Instance COnnect: username. connect to instance. uploads a temp ssh key. gives a web browser cli. 
++ dont iam keys into ec2 instance. create iam roles
++ attach certain iamroels into the instance. this allows you to list users. added IAM Read Only Access to a certain EC2 Instance Role. ? confused on this.
++ attached a policy to a iam role that corresponds to EC2 role. 
+## EC2 again
++ ondemand instances - short workload predicable pricing
++ reserved - long workloads with flexible instances are convertible reserved instances
++ savings plan - commitment to amount of usage, long workload. 
+_ spot instances - short workload. can lose these though? 
++ dedicated - physical server, instance = hardweare
++ ONDEMAND - billing per second after the first minute - highest cost but no upgront payment, no commitment. 
++ RESERVED - HIGH DISCOUNT - instance attribute, region, os etc., reservation period, upfront or no, scope of region or zone, steady state usage applications. buy and sell in marketplace. convertible reserved instances - change the EC2 instance type. 66% discount. EC2 savings plan. discount based on long term usage commit to a certain type of usage. locked to a region or instance family. intsance size is flexible/ os/ tenance . E
++ EC2 SPOT- u can lose if your max price is les than the current spot price. workloads that are resilient to failure are for these. - not goof for anything secure or needed
++ EC2 Dedicated hosts - address compliance requiremens and existing serverbound software licences.e Reserve or on demand. Reserving a phyusical server. Useful for software that have compliance - good for compliance.
++ EC2 Dedicated Instances - instances run on hardware that dedicated to you.own hwardare, host - physical server. 
++ EC2 Capacity Reservation - On-Demand instances capacity in specific AZ? for any direction. No time commitment, just trying to reserve. charged at on-demad rate whether or not you run.  good for short term uninterupted workload. 
+
+### spot instances and spot fleet
++ discount of up to 90%. define max spot price, while current < max then you have it. hourly rate varies based on supply demand. teminate or stop based on the 2  minute grace period. used for batch jobs, analysis, workloads failure. NO DATABASES. AZ = Availability Zone
++ terminate spot instance - one time or persistent. one time u requrest create then goeas away. persistent it keeps requesting until ends. 
++ fleet- picks the best launch pool ( instance type, os az) 
++ multiple launch pools - lowestPrice, diversified (distributed across pools), spot fleet = set of spot instances + on demand instanfces, capcityOptimized, priceCapacityOptimized (recomennded). 
++ spot fleet allow us to atuimatically request spot instances with the lowest price. 
+
+### EC2 hands on 
++ spot request. 
++ elastic ip is one you own until u delete it. can mask failure of software. you can only have 5 elastic IP in your account - poor architectural IP. IP and register a DNS name to it. Use a load balance and dont use a public IP at all .
+
+### Placement Groups
++ placement strategy ? - Cluster (low latency group in a  single AZ), Spread (spread across hardware, max 7 per AZ, crit applications). Partition - spread across many different set of racks within an AZ, scales to 100s of EC2 insstances per group. Cluster - great network but if AZ fails ur fucked.
++ Cluster Use: Big data job needed fast, low latency and high network throughput, 
++ Spread use; all instances on different hardware. Can span across AZ zones. Reduced Risk. 
++ Partition Group - 7 parities per az, each partition has multiple instances. not sure hwy its differnet. each parition is a rack - so you can have your own rack? , 100s of ec2 instances. ok so the instances in each parittion is its own hardware rack. "rack" is metaphorical i think, doesnt share ports maybe. Use case is big data applications.
+
+### elastic network interfaces (ENI)
++ VPC? cirtual network card. provides ip and shit.
++ CENI: Primary Private IPv4, one or more secondary ips. 
++ One elastic IP per IPV4.
+One or more security groups. One public IPV4, a mac address. You can create independently or move on the fly. Bound to a specific AZ. 
++ move ips between instances. - good for failover purposes.
++ So ENIs arent the actualy physical network cardsm, an abstraction on top of that that can be moved instance to instance. 
+
+### EC2 Hibernate 
++ stop - data on disk is kept intact until next start. 
++ terminate - any ebs volume root also set upto be descryed is lost.
++ HIBERNATE: RAM state is pereserved, os is not stopped or restarted it is paused. RAM state -> EBS VOLUME ENCRYPTED. 
++ long running process, saving ram state, services that take time to initialzie. 
++ Good to know - support hella families, instance ram size < 150GB . not supported for baremetal. 
++ root volume must be EBS - on demand, reserved, spot. < 60 days. 
++ root volume must have enough storage / memor? 
 + 
