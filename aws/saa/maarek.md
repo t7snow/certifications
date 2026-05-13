@@ -159,3 +159,9 @@ One or more security groups. One public IPV4, a mac address. You can create inde
 + root volume must be EBS - on demand, reserved, spot. < 60 days. 
 + root volume must have enough storage / memor? 
 + 
+
+## EC2 Instance Storage
++ EBS Volume - Elastic Block Store Voluem - network drive you can attach to your instances when they run. persist data after termination.  CCP - one ebs oen ec2 instance at a time. bound to a specific AZ zone. "NETWORK USB STICK" -> can attach to several instances
++ Network Drive. SOme latency. Detached from one to another. locked to a specific AZZ.  have a provisioned cpaacity , size in GBS and IOPS. EBS volumes can be unatached, attached on demand. 
++ Delete on termination attribute. Second to last column. Ticked for EBS behavior . by defualt the root EBS volume is delted. By default any other EBS volume is not deleted. preserve root volume when instance is terminated. 
++ 
