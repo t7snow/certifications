@@ -165,4 +165,30 @@ One or more security groups. One public IPV4, a mac address. You can create inde
 + Network Drive. SOme latency. Detached from one to another. locked to a specific AZZ.  have a provisioned cpaacity , size in GBS and IOPS. EBS volumes can be unatached, attached on demand. 
 + Delete on termination attribute. Second to last column. Ticked for EBS behavior . by defualt the root EBS volume is delted. By default any other EBS volume is not deleted. preserve root volume when instance is terminated. 
 + EBS Snapshot - make a snapshot then can copy it across AZ or regions
++ EBS Snapshot Archive -> move to archive which is 75% cheaper. 72 hours to restore, not immediate. Recycle bin for snapshots helps. Retnetion 1 day to 12 year. FSR -> full intialization of snapshot to have no latency on the first use (expensive) 5:30AM
++ Copy snapshot to any region. 
++ Recreate volume from snapshot. EBS volume. 
+
+
+### AMI 
++ Amazon MAchine IMage -> Customization of an EC2 INstance
++ prepacked AMI -> built for a specific region copied across them. Can launch EC2 instances from ami. can create your own ami, make and maintain yourself. aws marketplace ami
++ start -> stop -> build AMI (creates Ebs snapshots) -> launch . 
+
+### EC2 Instance Store
++ Hard drive attached to physical storver. High performance hardware disk. if you terminate instances the storage is lost. EPHEMERAL storage. Not a long term place.
++ Good for cache, buffer, scratch data, etc. 
++ Risk of data loss if hardware fails. 
+
+### EBS Volume Types
++ gp2 / gp3 (ssd) genereal purpose ssd -> medium
++ io1io2 SSD volume for low latency
+st1 -> low cost, sc1 -> lowest cost.
++ Size throughput IOPS (I/O Ops Per Sec)
++ only gp2/io are boot volumes
++ Genereal Purpose: cost effective storage, 1-16tb, virtual desktops, gp3 - 3000 IOPS and throuput of 125, up to 16l and 1k. gp2 -> max is 16k, size of vcolume and iops are linked
++ gp3 through and iops are not linked
++ provisioned iops -> database workload (storage consisitency) io1 -> 64k iops for Nitro, 32k others. io2 -> 256k iops IOPS 1000:1.
++ EBS multiattach
++ st1/sc1 -> 16tb big data, log processing, IOPS 500, Cold HDD -> SC1, IOPS 250
 + 
