@@ -281,4 +281,73 @@ NLB and GLB then we do pay for inter AZ.
 + Amazon Aurora: compatibile with mysql and postgres. cloud optimized. 5x performance improvements. automatically grows in increments of 10GB -> 256TB. 15 read replicas. Faster. Failover is instantanerous. 20% more. but better. High Availability. 6 copies of your data across 3AZ. 4 for writes, 3 for reads. self healing. storage is striped across 100s of volumes. only one instance takes writre -> master up to 15 read replicas. one masters, multiple replicas. Cluster? Master only writes, writer endopint is DNS name pointing to the right instance incase failover. read replicas autoscaling. **READEWR ENDPOINT** Connection load balancing. connects to correct read replicas. ROutine maintenance, backtrack, patching, scaling, compliance, etc. 
 + Amazon Aurora Advannced: Autoscaling: can have a custom endpoint. many custom endpoints. Server less: automated database instantiation and autoscaling. good for infrequent unpredicatbale workloads. Global Aurora: 1 primary region for read write, 10 secondary are readonly, up to 16 read replicas per region. **TYPICAL COROSS REGION TAKES LESS THAN 1 SECOND** ML based predictions for you applications. SageMaker, Comprehend. predicts idea. predictions based on the aurora database sql. Baeblfish: understand commands for mssql server. BabelFish allows you to T-SQL -> babelsish. Aurora works with it now. AWS SCT and DMS to migrate. RDS Backups: automated abcksup -> daily full backup during window. 5 minute transaction logs are backed up. ub a stiooed RDS database will not pay for storage. **EXAM TRICK**: In a stopped RDS database, you will still pay for storage. If yhou plan on stoppiung for a long time, snapshot and restore instead.  Automated backsup 1-> 35 days. POint in time recovery anywahere in that frame. Aurora database cloning: create a new cluster from an exiign one. 
 + RDS & AURRORA. At-restencryption with KMS. read replicas cant be necrypted if master not. db -> restore to encrypt. Inflight encrypted by default. AWSTLS root certs. IAM Auth, IAM ROLES to connect. Security groups. NO SSH since its managed service. Audit logs sint to cloud watch logs for retention
-+ 
+
+#### RDS Proxy
++ allows apps to pool and share db connections established with teh database. improving efficieny. multiple AZ. reduces failover by 66%. no code changesm just change where you connect. NEVER publicly accessible. only over VPC. Lambda functions -> execute pieces of codes. multiply many times. pools together lamda functions for db instance to go easier. it is overloaded on purpose.
+### Elasticache Overview
++ managed redis or memched - reduce load off of databases for read intensive worklodds - stateless. managed al os everything. heavy application code changes. 
++ Redis multi az AOF persistednce (what is that). supoprts sets and sorted sets. memchached - mul nodes for partitioned. not high avialability. non ersistent. backup and restore for servless only. replication vs sharding. 
++ IAM Auth for Redis. AWS API level security. 
++ REDIS auth password/token 
++ Memchae - SASL Based authentication. 
++ Lazy Loading - all read data iscached data can become stale
++ write through adds or updaate data in the cache when written to a db
++ session store temporary data in a cache 
++ REDIS: gaming leaderboards are computationally complex. redis sorted sets guarantee both uniqueness and element ordering. each tie an element is added its ranking in real time. 
++ Important ports:
+
+    FTP: 21
+
+    SSH: 22
+
+    SFTP: 22 (same as SSH)
+
+    HTTP: 80
+
+    HTTPS: 443 
+
+vs RDS Databases ports:
+
+    PostgreSQL: 5432
+
+    MySQL: 3306
+
+    Oracle RDS: 1521
+
+    MSSQL Server: 1433
+
+    MariaDB: 3306 (same as MySQL)
+
+    Aurora: 5432 (if PostgreSQL compatible) or 3306 (if MySQL compatible)
+
+## Route 53
+### DNS
++ Fomain Name System - human friendly hostnames into machine ip adress. .com -> example.com -> www.example.com -> ...
++ Registrar - GoDaddy, DNS Records, Zone FIle, Name Server, Top Level Domain, Second Level Domain, 
++ FQDN Fully qualified domain name
+### Route 53 Overview
++ scalable managed ADNS
++ Authroitative -. customer can update the dns records. 
++ 53 = port
++ Records -> how route traffic to domain
++ Record: DOmain, type, value , routing policy, ttl (time cached), A / AAAA/ CNAME/ NS
++ A -> Maps hostname to IPv4; AAAA maps hostname to IPv6, CNAME -> Hostname to hostnamde.cname record for the top node of a dns namespace. NS -> Name server for the hosted zone
++ Hosted zone. Public, private. VPC is private. 
++ .50 cents per hosted zone. public hosted zone: private hosted zone. 
++ Handson: 
++ TTL -> high ttl is less traffic. ttl is to make sure it caches the result people dont request often . higher slower lower more monay
++ CNAME vs Alias - CNAME -> points a hostname to another hostname. ONLY FOR NON ROOT DOMAIN . Alias -> hostname to an aws resource. wroks for root domain and non root domain. free! native heatlh ceheck 
++ alisas maps hostname to aws. an extension to dns functionality. automatically recognzie changes in resource Ip address.A/AAAA. no set TTL. ELB, CloudFront, API , Elastic, S3 websites, Route 53 record. Cannot set an alias for a EC2 hostname. asias lets you use blog.tucknow.com. 
+#### routing 
++ route traffic to a single resource, like client. ??
++ specify only one aws resource. cant be associated with health checks. 
++ weighted: control the % of requests that go to each specfic resource. 0 and 255. 
++ LAtency based- redirect to the lowest latency. closest region. can be associated with health checks. 
++ Health Checks - are only for public resources. route 53 make: dns records -> if one region down create health checks on both ALBs in regions. automated dns failover. integrated into CW
++ Health check. monitor an endpoint -> health cehcks from all around the world to check if it gets a 200 code. 15 global. threshold, interval, HTTP/S, TCP. > 18% healthy good to go. seems low. 
++ calculate health checks - combine a bunch into one health check large thing.encapsulation kinda. private hosted zone - CloudWatch Metric. alarm EC2 instance then create a health checker on the cloud watch alarm. ? why is the alarm not in the VPC? 
++ Failover. Primary with a health check, if unhealthy failover the second EC2 instances. route 53 automatically respons with right dns. 
++ Geolocation. default record if no match on location. health checks. how is this different than latency?
++ geoproximity. is this not the same? bias is a weighted value spand more traffic to resource, less trafifc to resource. AWS or non AWS resources. you can use route 53 to use. 
++ ip based reouting. based on client ip address. CIDRS? optimize perofmance or network costs. route end users from a specific isp to a specific endpoint. CIDR locations -> blocks. Records -> EC2 instances. 
++ MultiValue: return only values for healhty recourses. 8 health records. client side load balancing. return a bunch of records client picks one. 
