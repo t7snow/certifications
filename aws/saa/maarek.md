@@ -351,3 +351,44 @@ vs RDS Databases ports:
 + geoproximity. is this not the same? bias is a weighted value spand more traffic to resource, less trafifc to resource. AWS or non AWS resources. you can use route 53 to use. 
 + ip based reouting. based on client ip address. CIDRS? optimize perofmance or network costs. route end users from a specific isp to a specific endpoint. CIDR locations -> blocks. Records -> EC2 instances. 
 + MultiValue: return only values for healhty recourses. 8 health records. client side load balancing. return a bunch of records client picks one. 
++ Domain Registrar v DNS Service. Domain REgistrar usually gives a dns service. can use a non dns service to manage dns records. 
++ what are nameservers? - name server need to point to aws route 53. must be the dns thing. 
++ create a hosted zone in 53 -> update NS on 3rd party. 
++ Route 53 Resolve . Automatically answer DNS queires for lcoal domain names for EC2 isntnaces, records in phz, pns. hybrid has aws cloud and on deivce. resolver endpoint allow dns to resolve records in private hosted zone. resolver is in the VPC -> passes to the vpn or dx connection to the on premise private data center. /var/folders/80/r879dq1s46df13hzwljrlcl40000gn/T/TemporaryItems/NSIRD_screencaptureui_WawzUl/Screenshot\ 2026-05-16\ at\ 10.36.16 AM.png
+
+
+## Classic Solutions Architecture Discussions:
++ Managed service one interface with full thing. beanstalk is free but underslying shit. Application, version, environment (aws resources), tiers (web, worker) multiple env. 
++ web servier - > ELB AZ autoscaling EC2. Worker is an SQS queue rather than an ELB. wtf is SQS queue 
+
+## S3
++ infinitely caloing storage
++ backup and storage, disaster recovery, archive, hybrid cloud storage, host
++ buckets - defined at the region level. Account Regional Namespace. Allows for reuse o the samebucket name across regions. No uppercase, no underscore. 
++ object - key is the full path. prefix + object name. no directories, just keys
++ object values are the content of the body, max size 50TB. multipart uplaod 5GB. metadata
++ Userbased : IAM Policies, Resource Based: Bucket wide ruels fro mthe S3 console. Cross accoiunt. ACL: bucket control list, not commo.
++ Polciy: JSON based poloci, 
++ Static Website: S3 bucekt access 
++ versinoinin gat the bucket level. so each thing is a key? best practice to version ytour buckets. ability to restre a versiion. suspend versinin gdoesnt delete old versions
++ S3 replication: CRR, SRR, cross region / same. Asyncrhhonous replication. buckets can be in different AWS account, must give proper IAM perms. CRR is for compliance lower latency. SRR aggregation. 
++ after eable, only new ones. replicate existing using S3 ABatch Replication. No chaining of replications. #
+### Storage Class
++ Surability and avialabilityt: how many times its lost. 11 9s. avail. S3 99.99%, r53 minutes a year. 
++ Standrd. / General purpose - mobil gaming content etc. 
++ Storage - infrequent -  rapid access, lower cost on standard, 99.9%,backups. One Zone, 11 9s in a single AZ, data lost when AZ is destoyewd. 99.5 availablity
++ GFlacier - sotrage + retrieval cost - never used. minum storage is 90 days. 
++ Intelligent tiering - monthly monitoring and autotering, moves things when needed. noretrieval charges. 
+
+| Feature | Standard | Intelligent-Tiering | Standard-IA | One Zone-IA | Glacier Instant Retrieval | Glacier Flexible Retrieval | Glacier Deep Archive |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Durability | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s | 99.999999999% == 11 9’s |
+| Availability | 99.99% | 99.9% | 99.9% | 99.5% | 99.9% | 99.99% | 99.99% |
+| Availability SLA | 99.9% | 99% | 99% | 99% | 99% | 99.9% | 99.9% |
+| Availability Zones | >= 3 | >= 3 | >= 3 | 1 | >= 3 | >= 3 | >= 3 |
+| Min. Storage Duration Charge | None | None | 30 Days | 30 Days | 90 Days | 90 Days | 180 Days |
+| Min. Billable Object Size | None | None | 128 KB | 128 KB | 128 KB | 40 KB | 40 KB |
+| Retrieval Fee | None | None | Per GB retrieved | Per GB retrieved | Per GB retrieved | Per GB retrieved | Per GB retrieved |
+|
+
++ Express One Zone: high performance Single AZ. objects stored in one directory bucket in a single AZ. most buckets are distributed across AZ. handle 100k request per second with no latency. high dur but lower avail. colocate your storage and compute in same AZ> use case for AI ML trianing, financial modeling, etc. 
