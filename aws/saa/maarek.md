@@ -392,3 +392,38 @@ vs RDS Databases ports:
 |
 
 + Express One Zone: high performance Single AZ. objects stored in one directory bucket in a single AZ. most buckets are distributed across AZ. handle 100k request per second with no latency. high dur but lower avail. colocate your storage and compute in same AZ> use case for AI ML trianing, financial modeling, etc. 
+
+### Advanced Amazon S3
+
++ Moving between storage classes -> standard goes down. Sanrdad -> IT -> ONE ZONE -> Glacier instant -> flexible 
++ Lifecycle rules move to X after so long, expiration, transition, delete old verisions, inclpmete, certain prefix, object tags
++ S3 analytics give recommendations
++ Requester Pays: bucket owners pay for all storage and data transfer costs. user downloads networking and storage is owner. requester can pay for the data download, the ownerstill pays for the storage. 
++ Event Notifications: events : object created, removed, restore, filter, generate thumbnails of images to S3, SNS -> SQS -> LAMBDA FUNCTION. create unlimited S3 events. 
++ IAM Permissions. S3- > SNS rsource access policy. allows s3 -> sqs or sns. 
++ amazon eventbridge lets you send a notification to hella places
++ performance - baseline - 100-200ms low latency 3500 put 5500 get , per second per prefix, no limit to number of prefix. multi part - paralllelize uploads. divide in parts and upload to S3 = transfer acceleration - put file in edge location then fast private aws. aws is faster than public. perforamnce , speeds up downloads. 
++ bulk operations, any optio on list of objects. encrypt unecncypted objects. S3 Inv -> Athena -> Batch operations. Find all unecnrypted then encrypt. 
++ Storage Lens - analyze optimize storage across aws. aggregate data for org, use dashboard, configure dto export metrix daily to an S3 bucket. 
+- data protection, access, performance, activity, etc. detailed status code metrics. 
+  - free vs advanced. advanced is on cloudwatch. rprefix, on data for 15 months. 
+
+
+## Encrptio
+
++ SSE server side with SSE-S3, enabled by default, SSE-LM, SSE-C Client Side encryption
++ SSE3 - keys handled managed and owned by AWS. AES256. enabled by default for new bucks and objects. '
++ SSE KMS - server side but user control of keys and audit key using CloudTrail
+  - limitation: KMS limites. GenerateDataKey kms api. onluy so many api requests. high thrughput buckets
++ SSE C - keys managed by customer but transfered to S3. S3 does not store, HTTPS used, encryption key must be provided in HTTP headers. 
++ CLient side. client encrypt data bedfore sending to amazon S3. 
++ Inflight - SSL/TLS. HTTP /S . 
++ S3 Default vs Bucket policies.
++ bucket policies allow u to force a encryption. evaluated before default encryption
++ S3 CORS - CORD Cross Origin Resource Shairng. Origin = scheme + host + port. web browser based mechanism to allow requests to other origins while ivising the main origin. What is a Cross Origin
++ Must neable correct CORD headers on bucket. GET PUT all that jazz.
++ MFA Delete - force users to generate a cordew before doing important operations on S3. permantently delete an object verion. MFA wont be required to enable versioning, listr deleted versioning. 
++ Access Logs
++ Presigned url - expiration, inherit the permissions of the user who generated the url for get/ put. seems pretty crazy. 
++ WORM - WRite once read many create a vault lock policy, lock the polciy for future edits. helpful for compliance and data retention legal hold, goernance, compliance, etc. 
+
